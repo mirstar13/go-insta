@@ -4,11 +4,14 @@ import (
 	"log"
 	"os"
 
-	"github.com/ahmdrz/goinsta"
+	"github.com/ahmdrz/goinsta/v2"
+	"github.com/joho/godotenv"
 	"github.com/tcnksm/go-input"
 )
 
 func main() {
+	godotenv.Load(".env")
+
 	insta := goinsta.New(
 		os.Getenv("INSTAGRAM_USERNAME"),
 		os.Getenv("INSTAGRAM_PASSWORD"),
